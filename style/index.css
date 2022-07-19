@@ -1,0 +1,402 @@
+body {
+  overflow: hidden;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+}
+
+/* nav */
+header {
+  z-index: 5;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 0 10px #d3d3d3;
+  margin: auto;
+
+  width: 100vw;
+  height: 80px;
+}
+
+.nav-wrapper {
+  width: 90vw;
+  margin: auto;
+
+  height: 80px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: sans-serif;
+  width:225px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #38cee9, #846ffa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.nav-logo:hover {
+  background: linear-gradient(to left, #846ffa, #55e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.nav-logo::before {
+  content:"@";
+  display: inline-block;
+  text-align: center;
+  transition: all 1.0s;
+
+  background: linear-gradient(to right, #55e5ff, #846ffa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.nav-logo:hover::before {
+  -webkit-transform: rotateY(1turn);
+  -moz-transform: rotateY(1turn);
+  -o-transform: rotateY(1turn);
+  transform: rotateY(1turn);
+
+  background: linear-gradient(to right, #846ffa, #55e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+
+.nav-menu {
+  display: flex;
+  align-items: baseline;
+}
+
+.nav-menu a {
+  color: #969696;
+  text-transform: capitalize;
+  position: relative;
+  padding: 5px 0;
+  margin: 0 12px;
+}
+
+.nav-menu a::after {
+  content:"";
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #846ffa, #55e5ff);
+  transition: all .3s;
+}
+
+.nav-menu a:hover {
+  color:#161616;
+}
+
+.nav-menu a:hover::after {
+  width: 100%
+}
+
+/* banner */
+.banner-area {
+  width: 100vw;
+  background-color: #f9f9f9;
+  height: 250px;
+}
+
+.banner-inner {
+  position: relative;
+  padding: 5rem;
+  width: 1080px;
+  margin: auto;
+}
+
+.banner-inner h2 {
+  text-align: left;
+  font-size: 2rem;
+  transform: translateX(-10px);
+  transition: 0.5s;
+}
+
+.banner-area img {
+  width: 300px;
+  position: absolute;
+  right: 0;
+  bottom: -35%;
+}
+
+/* content-wrap */
+.content-wrap {
+  padding-top: 80px;
+  width: 100vw;
+}
+
+.text-wrap {
+  padding: 2rem;
+}
+
+/* about */
+.about {
+  margin: auto;
+  width: 100vw;
+  padding-top: 50px;
+}
+
+.about h1 {
+  width: 720px;
+  margin:auto;
+
+  text-align: left;
+  font-size: 3.5em;
+  color: #c5c5c5;
+}
+
+.about p {
+  width: 720px;
+  margin:auto;
+
+  text-align: left;
+  text-indent: 1rem;
+  font-size: 18px;
+  line-height: 180%;
+  color: #252525;
+
+  margin-top: 20px;
+}
+
+/* projects */
+.projects {
+  width: 100vw;
+  margin:auto;
+  padding-top: 50px;
+}
+
+.projects h1 {
+  width: 960px;
+  margin:auto;
+
+  text-align: right;
+  font-size: 3.5em;
+  color: #c5c5c5;
+}
+
+.projects ul {
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projects p {
+  width: 720px;
+  margin:auto;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: 180%;
+  color: #252525;
+
+  margin-top: 20px;
+}
+
+.project {
+  width: 450px;
+  margin: auto;
+}
+
+.project-image {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 12px;
+  background-repeat: no-repeat;
+}
+
+.project-1 .project-image {
+  width: 100%;
+  background-image: url(../image/mobile2.png);
+  background-position: center top;
+  background-size: 120%;
+  transition: 2.0s;
+}
+
+.project-2 .project-image {
+  width: 100%;
+  background-image: url(../image/crm_program.png);
+  background-position: center left;
+  background-size: 120%;
+  transition: 1.0s;
+}
+
+.project-3 .project-image {
+  width: 100%;
+  background-image: url(../image/spring.png);
+  background-position: center top;
+  background-size: 120%;
+  transition: 1.0s;
+}
+
+.project-1 .project-image:hover {
+  background-position: center bottom;
+}
+
+.project-2 .project-image:hover {
+  background-position: center right;
+}
+
+.project-3 .project-image:hover {
+  background-position: center bottom;
+}
+
+.project-title {
+  width: 250px;
+  font-size: 25px;
+  color: #969696;
+  padding: 0.5rem;
+  margin: auto;
+  border-bottom: 1px solid #969696;
+}
+
+.project-description{
+  color: #969696;
+  padding: 0.5rem;
+}
+
+
+/* tech */
+.tech {
+  margin: auto;
+  width: 100vw;
+  padding-top: 50px;
+}
+
+.tech h1 {
+  width: 960px;
+  margin:auto;
+
+  text-align: right;
+  font-size: 3.5em;
+  color: #c5c5c5;
+}
+
+.tech .text-wrap{
+  line-height: 250%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #252525;
+}
+
+.tech .text-wrap div {
+  width: 400px;
+  padding: 0 1rem;
+  border-right: 2px solid #c5c5c5;
+}
+
+.tech .text-wrap div:last-child {
+  border-right: none;
+}
+
+.tech .text-wrap div h3 {
+  font-size: 20px;
+}
+
+.baekjoon-wrap {
+  width: 720px;
+  position: relative;
+  margin: auto;
+}
+
+.baekjoon-wrap img {
+  position: absolute;
+  width: 300px;
+  left: 0;
+  bottom: 0;
+}
+
+.baekjoon {
+  width: 400px;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  margin:auto;
+}
+
+.baekjoon h3 {
+  width: 250px;
+  margin: auto;
+  padding: 1rem 0;
+  border-bottom: 1px solid #969696;
+}
+
+.baekjoon p {
+  padding: 1rem 0;
+  line-height: 180%;
+}
+
+.baekjoon a {
+  color: #846ffa;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid #969696;
+  transition: 0.5s;
+}
+
+.baekjoon a:hover {
+  background-color: #969696;
+  color: white;
+}
+
+
+
+/* contact */
+.contact {
+  margin: auto;
+  width: 100vw;
+  padding-top: 50px;
+}
+
+.contact h1 {
+  width: 960px;
+  margin:auto;
+
+  text-align: right;
+  font-size: 3.5em;
+  color: #c5c5c5;
+}
+
+.contact .icon-wrap {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.contact .icon-wrap a {
+  text-align: center;
+  display: block;
+  color: #252525;
+  margin: auto;
+  transition: 0.5s;
+}
+.contact .icon-wrap i {
+  font-size: 50px;
+}
+
+.contact .icon-wrap span {
+  font-size: 20px;
+}
+
+.contact .icon-wrap a:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #38cee9, #846ffa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
