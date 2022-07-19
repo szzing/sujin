@@ -190,7 +190,7 @@ header {
   margin: 2rem auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .projects p {
@@ -207,7 +207,6 @@ header {
 
 .project {
   width: 450px;
-  margin: auto;
 }
 
 .project-image {
@@ -354,8 +353,6 @@ header {
   color: white;
 }
 
-
-
 /* contact */
 .contact {
   margin: auto;
@@ -372,9 +369,52 @@ header {
   color: #c5c5c5;
 }
 
+.contact-image {
+  position: relative;
+  width: 350px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.contact-image img {
+  width: 300px;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.contact-image::after {
+  content: "💗";
+  text-align: center;
+  color: #846ffa;
+
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+  bottom: 40px;
+  transition: 1s;
+  opacity: 0%;
+}
+
+.contact-image:hover {
+  transform: scale(1.05);
+}
+
+.contact-image:hover::after {
+  font-size: 50px;
+  animation: fadeIn 2s forwards;
+}
+
 .contact .icon-wrap {
   width: 400px;
-  height: 300px;
+  height: 250px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -387,7 +427,7 @@ header {
   transition: 0.5s;
 }
 .contact .icon-wrap i {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .contact .icon-wrap span {
