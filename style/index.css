@@ -129,6 +129,11 @@ header {
   position: absolute;
   right: 0;
   bottom: -35%;
+  transition: 0.5s;
+}
+
+.banner-area img:hover {
+  transform: scale(1.05);
 }
 
 /* content-wrap */
@@ -317,6 +322,11 @@ header {
   width: 300px;
   left: 0;
   bottom: 0;
+  transition: 0.5s;
+}
+
+.baekjoon-wrap img:hover {
+  transform: rotate(-5deg);
 }
 
 .baekjoon {
