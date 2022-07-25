@@ -381,13 +381,13 @@ header {
 
 .contact-image {
   position: relative;
-  width: 350px;
+  width: 400px;
   margin: auto;
   transition: 0.5s;
 }
 
 .contact-image img {
-  width: 300px;
+  width: 350px;
   margin: auto;
 }
 
@@ -418,7 +418,7 @@ header {
 }
 
 .contact-image:hover::after {
-  font-size: 50px;
+  font-size: 65px;
   animation: fadeIn 2s forwards;
 }
 
